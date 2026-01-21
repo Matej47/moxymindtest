@@ -1,1 +1,36 @@
 task2-api/.env
+task2-api/.env.*
+!task2-api/.env.example
+
+# virtualenv
+task2-api/.venv/
+task2-api/venv/
+task2-api/env/
+
+# python
+task2-api/__pycache__/
+task2-api/**/*.py[cod]
+task2-api/*$py.class
+
+# tests / coverage
+task2-api/.pytest_cache/
+task2-api/.coverage
+task2-api/coverage.xml
+task2-api/htmlcov/
+task2-api/.tox/
+
+# type checkers / linters
+task2-api/.mypy_cache/
+task2-api/.ruff_cache/
+task2-api/.pyright/
+
+# builds
+task2-api/build/
+task2-api/dist/
+task2-api/*.egg-info/
+task2-api/.eggs/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
