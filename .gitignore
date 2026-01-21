@@ -34,3 +34,25 @@ task2-api/.eggs/
 .idea/
 .vscode/
 .DS_Store
+
+task3-mobile/.env
+task3-mobile/.env.*
+!task3-mobile/.env.example
+
+# virtualenv
+task3-mobile/.venv/
+task3-mobile/venv/
+task3-mobile/env/
+
+# python
+task3-mobile/__pycache__/
+task3-mobile/**/*.py[cod]
+task3-mobile/*$py.class
+
+# tests / coverage
+task3-mobile/.pytest_cache/
+
+# type checkers / linters
+task3-mobile/.mypy_cache/
+task3-mobile/.ruff_cache/
+task3-mobile/.pyright/
