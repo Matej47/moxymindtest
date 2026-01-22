@@ -56,3 +56,9 @@ task3-mobile/.pytest_cache/
 task3-mobile/.mypy_cache/
 task3-mobile/.ruff_cache/
 task3-mobile/.pyright/
+**/report.html
+**/window.xml
+*.log
+Thumbs.db
+desktop.ini
+
