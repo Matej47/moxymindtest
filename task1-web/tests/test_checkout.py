@@ -11,16 +11,15 @@ def test_checkout(driver):
     driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack").click()
     driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
     
-    # Step 4: Wait for Checkout button to appear and click it
-    checkout_button = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, "checkout"))
-    )
+    # Wait utilities
+    wait = WebDriverWait(driver, 10)
+
+    # Wait for Checkout button to appear and click it
+    checkout_button = wait.until(EC.element_to_be_clickable((By.ID, "checkout")))
     checkout_button.click()
 
     # Wait until checkout form is visible
-    first_name_input = WebDriverWait(driver, 10).until(
-        EC.visibility_of_element_located((By.ID, "first-name"))
-    )
+    first_name_input = wait.until(EC.visibility_of_element_located((By.ID, "first-name")))
     first_name_input.send_keys("Test")
 
     driver.find_element(By.ID, "last-name").send_keys("User")

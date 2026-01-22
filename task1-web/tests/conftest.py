@@ -12,20 +12,21 @@ load_dotenv()
 USERNAME = os.getenv("SAUCE_USERNAME")
 PASSWORD = os.getenv("SAUCE_PASSWORD")
 
-@pytest.fixture
-def driver():
+def _create_firefox_options():
     options = webdriver.FirefoxOptions()
     options.add_argument("--width=1920")
     options.add_argument("--height=1080")
     options.add_argument("--disable-notifications")
-    options.add_argument("--private")  # Incognito mode to avoid saving anything
-
-    # Disable Firefox password saving and autofill
+    options.add_argument("--private")
     options.set_preference("signon.rememberSignons", False)
     options.set_preference("signon.autofillForms", False)
     options.set_preference("network.http.prompt-temp-redirect", False)
     options.set_preference("privacy.popups.showBrowserMessage", False)
+    return options
 
+@pytest.fixture
+def driver():
+    options = _create_firefox_options()
     driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
     yield driver
     driver.quit()
