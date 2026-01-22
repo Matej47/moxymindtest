@@ -1,6 +1,6 @@
-from dotenv import load_dotenv
 import os
 import requests
+from dotenv import load_dotenv
 
 # Load the .env file at the very start
 load_dotenv()

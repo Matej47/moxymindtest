@@ -1,8 +1,8 @@
-import pytest
-from driver.android_driver import create_driver
-from appium.webdriver.common.appiumby import AppiumBy
 import time
 
+import pytest
+from appium.webdriver.common.appiumby import AppiumBy
+from driver.android_driver import create_driver
 @pytest.fixture
 def driver():
     driver = create_driver()
@@ -41,3 +41,4 @@ def test_toggle_alarm(driver):
     restored_state = alarm_switch.get_attribute("checked")
     print(f"Restored alarm state: {restored_state}")
     assert restored_state == initial_state, "Alarm state did not restore properly"
+

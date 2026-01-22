@@ -1,8 +1,8 @@
-import pytest
-from driver.android_driver import create_driver
 import time
-from appium.webdriver.common.appiumby import AppiumBy
 
+import pytest
+from appium.webdriver.common.appiumby import AppiumBy
+from driver.android_driver import create_driver
 @pytest.fixture
 def driver():
     driver = create_driver()
@@ -36,3 +36,4 @@ def test_stopwatch_start(driver):
     
     # Stop the stopwatch
     start_button.click()
+

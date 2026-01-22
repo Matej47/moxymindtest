@@ -62,3 +62,26 @@ task3-mobile/.pyright/
 Thumbs.db
 desktop.ini
 
+task1-web/.env
+task1-web/.env.*
+!task1-web/.env.example
+task1-web/.venv/
+task1-web/venv/
+task1-web/env/
+task1-web/__pycache__/
+task1-web/**/*.py[cod]
+task1-web/*$py.class
+task1-web/.pytest_cache/
+task1-web/.coverage
+task1-web/coverage.xml
+task1-web/htmlcov/
+task1-web/.tox/
+task1-web/.mypy_cache/
+task1-web/.ruff_cache/
+task1-web/.pyright/
+task1-web/build/
+task1-web/dist/
+task1-web/*.egg-info/
+task1-web/.eggs/
+
+
