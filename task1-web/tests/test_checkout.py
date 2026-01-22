@@ -4,7 +4,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from conftest import login
 
 def test_checkout(driver):
-    """Test checkout process: essential for completing purchases"""
+    """Validate the checkout flow from cart to overview.
+
+    Essential because checkout directly drives revenue. A broken flow prevents
+    order completion, causes user drop-off and so on. No money :(
+    """
     login(driver)
 
     # Add item to cart
